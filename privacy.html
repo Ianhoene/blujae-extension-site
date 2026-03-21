@@ -21,7 +21,7 @@
       </nav>
 
       <main class="policy-page">
-        <p class="eyebrow">Last updated: March 15, 2026</p>
+        <p class="eyebrow">Last updated: March 20, 2026</p>
         <h1>Privacy Policy</h1>
         <p>
           This Privacy Policy explains how Blujae collects, uses, stores, and shares information
@@ -34,7 +34,6 @@
             <li>Career profile details such as current role, target roles, experience, and skills</li>
             <li>Job preferences such as work arrangement, locations, compensation, and dealbreakers</li>
             <li>Career history, certifications, and education details</li>
-            <li>Resume files uploaded during onboarding</li>
             <li>Visible job listing information from pages the user chooses to analyze</li>
           </ul>
         </section>
@@ -43,7 +42,6 @@
           <h2>2. How information is used</h2>
           <ul>
             <li>Generate job fit analyses and related insights</li>
-            <li>Parse resume content and prefill onboarding fields</li>
             <li>Store user progress and preferences locally in the extension</li>
             <li>Support extension functionality, troubleshooting, and service reliability</li>
           </ul>
@@ -61,10 +59,10 @@
         <section>
           <h2>4. Backend processing</h2>
           <p>
-            When a user requests job analysis or resume parsing, Blujae sends relevant payloads to
-            backend services for processing. Depending on the feature used, those payloads may
-            include profile details, extracted job listing text, resume files, and resume-derived
-            context.
+            When a user requests a job analysis, Blujae sends the job listing text and relevant
+            parts of the user's profile to our backend server. The backend forwards this data to
+            OpenAI's API to generate the fit analysis, then returns the result. No user data is
+            written to any database or log — the backend is stateless.
           </p>
         </section>
 
@@ -80,9 +78,9 @@
         <section>
           <h2>6. Data sharing</h2>
           <p>
-            Blujae shares information with backend service providers only as needed to deliver job
-            analysis and resume parsing functionality. This policy does not state that Blujae sells
-            personal information.
+            Blujae shares job listing and profile data with OpenAI solely to generate job fit
+            analyses. OpenAI does not use API data to train its models. No data is sold or shared
+            with any other third party.
           </p>
         </section>
 
@@ -90,15 +88,14 @@
           <h2>7. Data retention</h2>
           <p>
             Data stored in Chrome local storage remains on the user’s device until the user clears
-            it, removes the extension, or the extension overwrites that data. Backend retention
-            practices should be reviewed against the live production setup before store submission.
+            it or removes the extension. The backend server does not retain any user data after
+            returning an analysis result.
           </p>
         </section>
 
         <section>
           <h2>8. User choices</h2>
           <ul>
-            <li>Choose whether to upload a resume</li>
             <li>Edit or replace profile information inside the extension</li>
             <li>Remove the extension to stop future collection from extension use</li>
             <li>Clear extension data from Chrome storage through browser controls</li>
@@ -125,8 +122,7 @@
         <section>
           <h2>11. Contact</h2>
           <p>
-            Privacy or support requests should be directed through the publisher contact method used
-            in the Blujae Chrome Web Store listing or associated public repository.
+            For privacy questions or data requests, contact <a href="mailto:methodius@gmail.com">methodius@gmail.com</a>.
           </p>
         </section>
       </main>
