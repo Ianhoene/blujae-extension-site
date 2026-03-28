@@ -21,7 +21,7 @@
       </nav>
 
       <main class="policy-page">
-        <p class="eyebrow">Last updated: March 20, 2026</p>
+        <p class="eyebrow">Last updated: March 28, 2026</p>
         <h1>Privacy Policy</h1>
         <p>
           This Privacy Policy explains how Blujae collects, uses, stores, and shares information
@@ -61,8 +61,11 @@
           <p>
             When a user requests a job analysis, Blujae sends the job listing text and relevant
             parts of the user's profile to our backend server. The backend forwards this data to
-            OpenAI's API to generate the fit analysis, then returns the result. No user data is
-            written to any database or log — the backend is stateless.
+            OpenAI's API to generate the fit analysis, then returns the result. For operational
+            monitoring purposes, each request to our backend is logged via Axiom. These logs
+            include the request path, HTTP method, response status, response time, IP address,
+            and browser user agent. Logs are retained for 30 days and are not used for any
+            purpose other than monitoring service health and diagnosing errors.
           </p>
         </section>
 
@@ -79,8 +82,9 @@
           <h2>6. Data sharing</h2>
           <p>
             Blujae shares job listing and profile data with OpenAI solely to generate job fit
-            analyses. OpenAI does not use API data to train its models. No data is sold or shared
-            with any other third party.
+            analyses. OpenAI does not use API data to train its models. Request metadata (IP
+            address, user agent, request path, and response details) is shared with Axiom for
+            operational logging. No data is sold or shared with any other third party.
           </p>
         </section>
 
@@ -88,8 +92,9 @@
           <h2>7. Data retention</h2>
           <p>
             Data stored in Chrome local storage remains on the user’s device until the user clears
-            it or removes the extension. The backend server does not retain any user data after
-            returning an analysis result.
+            it or removes the extension. Job listing and profile data sent to the backend is not
+            retained after the analysis result is returned. Request metadata logged via Axiom
+            (IP address, user agent, request path, and response details) is retained for 30 days.
           </p>
         </section>
 
